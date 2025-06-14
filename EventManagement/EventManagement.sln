@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "eventmanagement.client", "eventmanagement.client\eventmanagement.client.esproj", "{82ECED45-AD77-5058-4250-A8C3A0C53773}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManagement.Server", "EventManagement.Server\EventManagement.Server.csproj", "{B6A6B54C-1C15-4D80-A108-78B932F6D511}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82ECED45-AD77-5058-4250-A8C3A0C53773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82ECED45-AD77-5058-4250-A8C3A0C53773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82ECED45-AD77-5058-4250-A8C3A0C53773}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{82ECED45-AD77-5058-4250-A8C3A0C53773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82ECED45-AD77-5058-4250-A8C3A0C53773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82ECED45-AD77-5058-4250-A8C3A0C53773}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B6A6B54C-1C15-4D80-A108-78B932F6D511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A6B54C-1C15-4D80-A108-78B932F6D511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A6B54C-1C15-4D80-A108-78B932F6D511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A6B54C-1C15-4D80-A108-78B932F6D511}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C2336B5-FCCC-4FE6-A5E7-637767BDB399}
+	EndGlobalSection
+EndGlobal
