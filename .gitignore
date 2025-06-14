@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/EventManagement/.vs/EventManagement
+/EventManagement/EventManagement.Server/obj
