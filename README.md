@@ -36,7 +36,7 @@ A full-stack ticketing and event analytics platform built with **ASP.NET Core (.
 - Responsive layout
 - Error handling for API failures
 ## 🔧 API URL Configuration
-
+The server project should be selected as the startup project
 To ensure the React frontend communicates correctly with the backend, make sure the API base URL defined in `src/config.jsx` matches the `applicationUrl` in the backend's `launchSettings.json`:
 
 ### 📄 Frontend – `src/config.jsx`
