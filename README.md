@@ -1,5 +1,38 @@
 ﻿
 ---
+# 🎟️ Event Ticketing System
+
+A full-stack ticketing and event analytics platform built with **ASP.NET Core (.NET 8)**, **NHibernate**, **SQLite**, and **React**. It provides API endpoints for event listings and ticket sales analytics, along with a modern frontend UI for displaying and interacting with the data.
+
+---
+
+## 📁 Project Structure
+
+/EventTicketingSystem
+│
+├── /Api # ASP.NET Core Web API (.NET 8)
+│ ├── Controllers # EventsController
+│ ├── Services # IEventService, ITicketSaleService
+│ ├── Repositories # NHibernate data access
+│ ├── NHibernate # Fluent mappings
+│ ├── DTOs # EventDto, TicketSaleDto
+│ ├── Tests # Unit tests with xUnit
+│ └── appsettings.json # SQLite DB connection
+│
+├── /Frontend # React app
+│ ├── src
+│ │ ├── components # UI components
+│ │ ├── pages # Event list & summary pages
+│ │ └── config.jsx # API base URL configuration
+│ ├── public
+│ └── package.json
+│
+├── /Database
+│ ├── events.db # SQLite database
+│ └── schema.sql # Schema + seed script
+│
+└── README.md
+
 
 ## ✅ Features
 
