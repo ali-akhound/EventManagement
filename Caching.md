@@ -46,21 +46,14 @@ Each microservice is implemented as an independent application with its own data
 
 ---
 
-## Redis Caching Strategy
+# 🎯 Caching Strategy: Redis with Cache-Aside (Lazy Loading)
 
-To improve performance and reduce load on the databases, Redis is used as a distributed caching layer with the following strategies:
+## 🧠 Why Cache-Aside?
+The **Cache-Aside (Lazy Loading)** strategy improves read performance while keeping cache memory lean and ideal for read-heavy workloads. It works well when:
 
-- **Cache frequently requested data:**
-  - Event details, seat availability, and other mostly read-heavy data.
-- **Cache hot paths:**
-  - Popular events or ticket availability to handle burst traffic.
-- **Cache invalidation:**
-  - Use TTL (time-to-live) on cached entries to ensure data freshness.
-  - Cache updated or invalidated by event-driven triggers when underlying data changes.
-- **Distributed Cache:**
-  - Shared cache across all microservice instances to avoid cache duplication.
-- **Use Redis Pub/Sub or Streams:**
-  - Notify services to invalidate or update caches after data changes.
+- Reads are more frequent than writes (e.g., browsing event/ticket data)
+- Cache doesn't need to hold everything at all times
+- Data changes frequently enough to need a fresh fetch occasionally
 
 ---
 
