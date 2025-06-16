@@ -49,15 +49,3 @@ const config = {
 };
 
 export default config;
-
----
-
-## 🚀 Getting Started
-
-### 🔧 Backend Setup
-
-1. Clone the repository:
-```bash
-git clone https://github.com/ali-akhound/EventTicketingSystem.git
-cd EventTicketingSystem/Api
-
