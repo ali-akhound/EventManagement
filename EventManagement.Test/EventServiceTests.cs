@@ -29,6 +29,7 @@ namespace EventManagement.Test
         private EventRepo _EventRepo;
         private TicketSaleRepo _TicketSaleRepo;
         private EventService _EventService;
+        private TicketSaleService _TicketSaleService;
 
         [SetUp]
         public void Setup()
@@ -56,6 +57,7 @@ namespace EventManagement.Test
             _EventRepo = new EventRepo(_session);
             _TicketSaleRepo = new TicketSaleRepo(_session);
             _EventService = new EventService(_EventRepo);
+            _TicketSaleService=new TicketSaleService(_TicketSaleRepo);
             SeedTestData();
         }
         private void SeedTestData()
@@ -95,22 +97,20 @@ namespace EventManagement.Test
             // Assert
             Assert.IsNotNull(result);
             Assert.AreEqual(1, result.Count);
-            //Assert.IsTrue(result.Any(e => e.Id == "1"));
-            //Assert.IsTrue(result.Any(e => e.Id == "2"));
         }
 
 
         [Test]
         public async Task GetTicketSalesAsync_ShouldReturnSalesForEvent()
         {
-            var result = await _TicketSaleRepo.GetTicketSalesAsync("1");
+            var result = await _TicketSaleService.GetTicketSaleAsync("1");
             Assert.AreEqual(2, result.Count);
         }
 
         [Test]
         public async Task GetTop5EventsByRevenueAsync_ShouldReturnTopEvents()
         {
-            var result = await _TicketSaleRepo.GetTop5EventsByRevenueAsync();
+            var result = await _TicketSaleService.GetTop5EventsByRevenueAsync();
             Assert.AreEqual(2, result.Count);
             Assert.AreEqual("1", result[0].Id); // Event 1 has more revenue
         }
@@ -118,7 +118,7 @@ namespace EventManagement.Test
         [Test]
         public async Task GetTop5EventsBySalesCountAsync_ShouldReturnTopEvents()
         {
-            var result = await _TicketSaleRepo.GetTop5EventsBySalesCountAsync();
+            var result = await _TicketSaleService.GetTop5EventsBySalesCountAsync();
             Assert.AreEqual(2, result.Count);
             Assert.AreEqual("1", result[0].Id); // Event 1 has more sales
         }
